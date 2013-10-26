@@ -1,4 +1,4 @@
-## TWL06: The Official Scrabble Tournament Word List
+## TWL06: The Official Scrabble Dictionary
 
 A convenient, self-contained, 515 KB Scrabble dictionary module, ideal
 for use in word games.
@@ -46,8 +46,8 @@ Each record of the DAWG table is packed into a 32-bit integer.
 * L - ASCII Letter (lowercase or '$')
 * I - Index (Pointer)
 
-The helper method _get_record(index) will extract these three elements 
-into a Python tuple such as (True, 'a', 26). 
+The helper method `_get_record(index)` will extract these three elements 
+into a Python tuple such as `(True, 'a', 26)`.
 
 All searches start at index 0 in the lookup table. Records are scanned 
 sequentially as long as the More flag is set. These records represent all 
@@ -101,9 +101,9 @@ So the prefix 'b' may be followed only by these letters:
 
     a, d, e, h, i, l, o, r, u, w, y
 
-The helper method _get_child(index, letter) will return a new index
-(or None if not found) when traversing an edge to a new node. For
-example, _get_child(0, 'b') returns 25784.
+The helper method `_get_child(index, letter)` will return a new index
+(or `None` if not found) when traversing an edge to a new node. For
+example, `_get_child(0, 'b')` returns 25784.
 
 The search is performed iteratively until the sentinel value, $, is
 found. If this value is found, the string is a word in the dictionary.
